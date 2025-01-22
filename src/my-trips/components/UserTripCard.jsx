@@ -2,6 +2,7 @@ import { GetPlaceDetails, PHOTO_REF_URL } from '@/service/GlobalApi';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
+
 const UserTripCard = ({ trip }) => {
     const [photoUrl, setPhotoUrl] = useState()
     useEffect(() => {
@@ -24,7 +25,7 @@ const UserTripCard = ({ trip }) => {
     return (
         <Link to={'/view-trip/'+trip?.id}>
             <div className='hover:scale-105 transition-all '>
-                <img src={photoUrl ? photoUrl : '/trave.jpg'} className='object-cover rounded-xl h-[250px]'  alt="" />
+                <img src={photoUrl ? photoUrl : '/trave.jpg'} className='object-cover rounded-xl h-[250px] w-full'  alt="" />
 
                 <div>
                     <h2 className='font-bold text-lg'>{trip.userSelection?.location?.label}</h2>

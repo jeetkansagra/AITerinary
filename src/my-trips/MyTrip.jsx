@@ -36,7 +36,7 @@ const MyTrip = () => {
 
   return (
     <div className='sm:px-14 md:px-24 lg:px-56 px-5 mt-5 md:mt-8 lg:mt-10 '>
-      <h2 className='font-bold text-xl md:text-2xl mb-2 lg:text-3xl'>My Trips</h2>
+      <h2 className='font-bold text-xl md:text-2xl mb-2 lg:text-3xl highlight-brush'>My Trips</h2>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-7 gap-5'> 
         {userTrips?.length>0 ? userTrips.map((trip,index)=>(

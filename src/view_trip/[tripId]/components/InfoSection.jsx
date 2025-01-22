@@ -29,7 +29,7 @@ function InfoSection ({ trip }) {
         <div>
             <img src={photoUrl ? photoUrl :'/travel.jpg'} alt="" className='h-[300px] w-full object-cover rounded-lg' />
 
-            <div className='flex justify-between items-center'> 
+            <div className='flex justify-between items-end sm:items-center'> 
                 <div className='my-5 flex flex-col gap-2'>
                     <h2 className='font-bold text-lg md:2xl: '>{trip?.userSelection?.location?.label}</h2>
                     <div className='flex gap-1 md:gap-5 sm:gap-2 pt-1  '>
@@ -41,8 +41,8 @@ function InfoSection ({ trip }) {
                         </h2>
                     </div>
                 </div>
-                <div className='flex justify-end items-center'>
-                    <Button><IoIosSend /></Button>
+                <div className='flex justify-end pl-8 mb-4 items-end'>
+                    <Button ><IoIosSend /></Button>
                 </div>
                 
 

@@ -24,12 +24,18 @@ const PlaceCardItem = ({ place }) => {
   return (
     <Link to={'https://www.google.com/maps/search/?api=1&query=' + place.placeName} target='_blank'>
       <div className='border rounded-lg p-2 mt-2 flex gap-5 hover:scale-105 transition-all hover:shadow-xl cursor-pointer'>
-        <img src={photoUrl ? photoUrl :'/travel.jpg'} className='w-[150px] h-[150px] rounded-xl ' alt="" />
+        <img src={photoUrl ? photoUrl : '/travel.jpg'} className='w-[150px] h-[150px] rounded-xl ' alt="" />
 
         <div>
           <h2 className='font-bold text-lg'>{place.placeName}</h2>
           <p className='text-sm text-gray-500'>{place.placeDetails}</p>
           <p className='mt-1.5'>🕒 {place.travelTime}</p>
+          <p className='mt-1.5'>🎫 {place.ticketPricing === 0
+            ? "Free"
+            : place.ticketPricing === "Varies"
+              ? "Varies"
+              : '$' + place.ticketPricing}
+          </p>
 
         </div>
       </div>

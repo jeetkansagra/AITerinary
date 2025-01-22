@@ -117,3 +117,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .highlight-brush {
+    background: url('/yellow-brush-stroke.png') no-repeat center; /* Refers to public folder */
+    background-size: cover; /* Ensures it scales appropriately */
+    display: inline-block; /* Applies the highlight only around the text */
+    color: black; /* Ensures the text remains visible */
+    padding: 0.4rem 1rem; /* Adjust spacing to make it visually appealing */
+  }
+}
+

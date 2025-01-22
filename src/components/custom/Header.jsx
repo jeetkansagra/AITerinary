@@ -52,10 +52,10 @@ const Header = () => {
         {user ?
           <div className='flex items-center '> 
           <a href="/create-trip">
-            <Button variant = "outline" className="rounded-full ">+ Create Trip</Button>
+            <Button variant = "outline" className="rounded-full  sm:text-base text-sm sm:px-4 px-3 py-1 sm:py-2">+ Create Trip</Button>
           </a>
           <a href="/my-trips">
-            <Button variant = "outline" className="rounded-full mx-4 ">My Trips</Button>
+            <Button variant = "outline" className="rounded-full mx-1 md:mx-3  sm:text-base text-sm sm:px-4 px-3 py-1 sm:py-2">My Trips</Button>
           </a>
             <Popover>
               <PopoverTrigger><img src={user.picture} className='h-[35px] w-[35px] rounded-full'  /></PopoverTrigger>
